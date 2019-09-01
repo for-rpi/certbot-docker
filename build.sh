@@ -28,7 +28,7 @@ Cleanup
 
 # Step 1: Certbot core Docker
 
-DOCKER_REPO="certbot/certbot"
+DOCKER_REPO="forrpi/certbot"
 CONTEXT_PATH="$WORK_DIR/core"
 DOCKERFILE_PATH="$CONTEXT_PATH/Dockerfile"
 IMAGE_NAME="$DOCKER_REPO:$DOCKER_TAG"
@@ -42,20 +42,7 @@ Cleanup
 # Step 2: Certbot dns plugins Dockers
 
 CERTBOT_PLUGINS_DOCKER_REPOS=(
-    "certbot/dns-dnsmadeeasy"
-    "certbot/dns-dnsimple"
-    "certbot/dns-ovh"
-    "certbot/dns-cloudflare"
-    "certbot/dns-cloudxns"
-    "certbot/dns-digitalocean"
-    "certbot/dns-google"
-    "certbot/dns-luadns"
-    "certbot/dns-nsone"
-    "certbot/dns-rfc2136"
-    "certbot/dns-route53"
-    "certbot/dns-gehirn"
-    "certbot/dns-linode"
-    "certbot/dns-sakuracloud"
+    "forrpi/certbot-dns-digitalocean"
 )
 
 for DOCKER_REPO in ${CERTBOT_PLUGINS_DOCKER_REPOS[@]}; do

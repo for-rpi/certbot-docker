@@ -1,4 +1,4 @@
-FROM certbot/certbot
+FROM forrpi/certbot
 
 ARG PLUGIN_NAME
 
